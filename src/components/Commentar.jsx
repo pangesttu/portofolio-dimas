@@ -29,8 +29,8 @@ const Comment = memo(({ comment, formatDate, index, isPinned = false }) => (
       <div className="flex-grow min-w-0">
         <div className="flex items-center justify-between gap-4 mb-2">
           <div className="flex items-center gap-2">
-            <h4 className={`font-medium truncate ${isPinned ? "text-indigo-200" : "text-[#0077B6]"}`}>{comment.user_name}</h4>
-            {isPinned && <span className="px-2 py-0.5 text-xs bg-indigo-500/20 text-indigo-300 rounded-full">Admin</span>}
+            <h4 className={`font-medium truncate ${isPinned ? "text-[#0077B6]" : "text-[#0077B6]"}`}>{comment.user_name}</h4>
+            {isPinned && <span className="px-2 py-0.5 text-xs bg-indigo-500/20 text-[#8338ec] rounded-full">Creator</span>}
           </div>
           <span className="text-xs text-gray-400 whitespace-nowrap">{formatDate(comment.created_at)}</span>
         </div>
